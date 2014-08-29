@@ -30,4 +30,5 @@ desc "Runs unit tests"
 task :unit_test => :compile do
   runner = NUnitRunner.new :compilemode => COMPILE_TARGET, :source => 'src', :platform => 'x86'
   runner.executeTests ['PizzaWeb.Test']
+  runner.executeTests ['InteractionTests']
 end
